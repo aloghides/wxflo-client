@@ -1,0 +1,9 @@
+<h1>Current Conditions</h1>
+<section ng-if='$ctrl.weatherData.obsData.properties'>
+    <p>{{ $ctrl.weatherData.meta.properties.relativeLocation.properties.city }}, {{ $ctrl.weatherData.meta.properties.relativeLocation.properties.state }}</p>
+    <br><img src={{$ctrl.weatherData.obsData.properties.icon}} /><br>{{ $ctrl.weatherData.obsData.properties.textDescription }}
+    <p>Last update:  {{ $ctrl.weatherData.obsData.properties.timestamp | date:"short"}}</p>
+    <p>Temperature:  {{ $ctrl.weatherData.obsData.properties.temperature.value | number }} &deg; C</p>
+    <p>Feels Like:  {{ $ctrl.weatherData.obsData.properties.heatIndex.value | number }} &deg; C</p>
+</section>
+<!-- <pre>{{ $ctrl.weatherData.obsData.properties | json }}</pre> -->

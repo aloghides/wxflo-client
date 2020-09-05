@@ -1,0 +1,9 @@
+<section ng-if='$ctrl.weatherData'>
+    <h1>Hourly Forecast</h1>
+    <ul type='none'>
+        <li ng-repeat='point in $ctrl.weatherData.forecastHourly.properties.periods | limitTo:12'>
+            {{ point.startTime | date:"shortTime"}} <img src={{point.icon}} />{{ point.temperature }} &deg; F
+        </li>
+    </ul>
+</section>
+<!-- <pre>{{ $ctrl.hourlyData | json }}</pre> -->
