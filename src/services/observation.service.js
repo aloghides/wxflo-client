@@ -1,4 +1,4 @@
-const base = 'http://localhost:8080/obs/location';
+const base = 'https://desolate-escarpment-25315.herokuapp.com/obs/location';
 
 class ObservationService{
     constructor ($http){

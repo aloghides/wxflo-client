@@ -1,4 +1,4 @@
-const base = 'http://localhost:8080/hourly';
+const base = 'https://desolate-escarpment-25315.herokuapp.com/hourly';
 
 class HourlyService{
     constructor ($http){

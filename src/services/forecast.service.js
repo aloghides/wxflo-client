@@ -1,4 +1,4 @@
-const base = 'http://localhost:8080/forecast';
+const base = 'https://desolate-escarpment-25315.herokuapp.com/forecast';
 
 class ForecastService{
     constructor ($http){
@@ -14,5 +14,3 @@ class ForecastService{
 ForecastService.$inject =  ['$http'];
 
 export default ForecastService;
-
-//currently gets only 7day
