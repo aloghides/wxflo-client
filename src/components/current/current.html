@@ -40,7 +40,7 @@
             </dl>
             <dl class="f5 lh-title mv2">
               <dt class="dib near-white">Pressure:</dt>
-              <dd class="dib ml0 light-green">{{ $ctrl.weatherData.obsData.properties.barometricPressure.value * .01 }} mb</dd>
+              <dd class="dib ml0 light-green">{{ ($ctrl.weatherData.obsData.properties.barometricPressure.value * .01) | number:1 }} mb</dd>
             </dl>
             <dl class="f5 lh-title mv2" ng-if="$ctrl.weatherData.forecast.properties.periods[0].isDaytime">
               <dt class="dib near-white">Expected High:</dt>
