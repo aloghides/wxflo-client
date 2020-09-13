@@ -1188,6 +1188,10 @@ code, .code { font-family: Consolas, monaco, monospace; }
 .bg-washed-green { background-color: #e8fdf5; }
 .bg-washed-yellow { background-color: #fffceb; }
 .bg-washed-red { background-color: #ffdfdf; }
+.bg-wxflo-dark-blue { background-color: #0f4c75; }
+.bg-wxflo-dark-gray { background-color: #1b262c; }
+.bg-wxflo-light-blue { background-color: #3282b8; }
+.bg-wxflo-gray { background-color: #bbe1fa; }
 .bg-inherit { background-color: inherit; }
 /* 
   
