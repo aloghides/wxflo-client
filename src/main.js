@@ -4,6 +4,7 @@ const tachyons = require('tachyons/css/tachyons.css')
 
 //Components
 import AppComponent from './components/app/index';
+import NavComponent from './components/nav/index'
 import SearchComponent from './components/search/index';
 import CurrentWeatherComponent from './components/current/index';
 import HourlyWeatherComponent from './components/hourly/index';
@@ -23,6 +24,7 @@ module('wxflo-client', [])
         .service('observation', ObservationService)
         .service('geolocation', GeolocationService)
         .component('app', AppComponent)
+        .component('nav', NavComponent)
         .component('search', SearchComponent)
         .component('forecastWeather', ForecastWeatherComponent)
         .component('currentWeather', CurrentWeatherComponent)
