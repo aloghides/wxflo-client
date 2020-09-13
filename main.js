@@ -138,7 +138,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nfunction _classCallCheck(inst
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// Module\nvar code = \"<search on-search='$ctrl.onSearch(event)' location='$ctrl.location'></search>\\r\\n<current-weather weather-data='$ctrl.weatherData'></current-weather>\\r\\n<hourly-weather weather-data='$ctrl.weatherData'></hourly-weather>\\r\\n<forecast-weather weather-data='$ctrl.weatherData'></forecast-weather>\\r\\n\\r\\n<!-- <pre>{{ $ctrl.weather | json }}</pre> -->\\r\\n\\r\\n\\r\\n         \";\n// Exports\nmodule.exports = code;\n\n//# sourceURL=webpack:///./src/components/app/app.html?");
+eval("// Module\nvar code = \"<nav></nav>\\r\\n<search on-search='$ctrl.onSearch(event)' location='$ctrl.location'></search>\\r\\n<current-weather weather-data='$ctrl.weatherData'></current-weather>\\r\\n<hourly-weather weather-data='$ctrl.weatherData'></hourly-weather>\\r\\n<forecast-weather weather-data='$ctrl.weatherData'></forecast-weather>\\r\\n\\r\\n<!-- <pre>{{ $ctrl.weather | json }}</pre> -->\\r\\n\\r\\n\\r\\n         \";\n// Exports\nmodule.exports = code;\n\n//# sourceURL=webpack:///./src/components/app/app.html?");
 
 /***/ }),
 
@@ -259,6 +259,41 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hou
 
 /***/ }),
 
+/***/ "./src/components/nav/index.js":
+/*!*************************************!*\
+  !*** ./src/components/nav/index.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nav_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nav.controller */ \"./src/components/nav/nav.controller.js\");\n/* harmony import */ var _nav_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./nav.html */ \"./src/components/nav/nav.html\");\n/* harmony import */ var _nav_html__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_nav_html__WEBPACK_IMPORTED_MODULE_1__);\n\n\nvar component = {\n  controller: _nav_controller__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  template: _nav_html__WEBPACK_IMPORTED_MODULE_1___default.a\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (component);\n\n//# sourceURL=webpack:///./src/components/nav/index.js?");
+
+/***/ }),
+
+/***/ "./src/components/nav/nav.controller.js":
+/*!**********************************************!*\
+  !*** ./src/components/nav/nav.controller.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar NavController = function NavController() {\n  _classCallCheck(this, NavController);\n};\n\nNavController.$inject = [];\n/* harmony default export */ __webpack_exports__[\"default\"] = (NavController);\n\n//# sourceURL=webpack:///./src/components/nav/nav.controller.js?");
+
+/***/ }),
+
+/***/ "./src/components/nav/nav.html":
+/*!*************************************!*\
+  !*** ./src/components/nav/nav.html ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// Module\nvar code = \"<div class=\\\"db dt-l w-100 border-box pa1 ph5-l bg-wxflo-dark-blue mw9 center ba bw2\\\">\\r\\n    <a class=\\\"db dtc-l v-mid mid-gray link dim w-100 w-25-l tc tl-l mb2 mb0-l\\\" href=\\\"#\\\" title=\\\"Home\\\">\\r\\n      <h1 class=\\\"near-white f3\\\">WXFlo</h1>\\r\\n    </a>\\r\\n    <div class=\\\"db dtc-l v-mid w-100 w-75-l tc tr-l\\\">\\r\\n      <a class=\\\"link dim near-white f6 f5-l dib mr3 mr4-l\\\" href=\\\"#\\\" title=\\\"Weather\\\">Weather</a>\\r\\n      <a class=\\\"link dim near-white f6 f5-l dib mr3 mr4-l\\\" href=\\\"#\\\" title=\\\"Radar\\\">Radar</a>\\r\\n      <a class=\\\"link dim near-white f6 f5-l dib mr3 mr4-l\\\" href=\\\"#\\\" title=\\\"Sat\\\">Sat</a>\\r\\n      <a class=\\\"link dim near-white f6 f5-l dib mr3 mr4-l\\\" href=\\\"#\\\" title=\\\"Blog\\\">Blog</a>\\r\\n      <a class=\\\"link dim near-white f6 f5-l dib\\\" href=\\\"#\\\" title=\\\"About\\\">About</a>\\r\\n    </div>\\r\\n</div>\\r\\n  \";\n// Exports\nmodule.exports = code;\n\n//# sourceURL=webpack:///./src/components/nav/nav.html?");
+
+/***/ }),
+
 /***/ "./src/components/search/index.js":
 /*!****************************************!*\
   !*** ./src/components/search/index.js ***!
@@ -302,7 +337,7 @@ eval("// Module\nvar code = \"<!--- Search -->\\r\\n<!--<form ng-submit='$ctrl.u
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var angular__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! angular */ \"./node_modules/angular/index.js\");\n/* harmony import */ var angular__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(angular__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_app_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/app/index */ \"./src/components/app/index.js\");\n/* harmony import */ var _components_search_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/search/index */ \"./src/components/search/index.js\");\n/* harmony import */ var _components_current_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/current/index */ \"./src/components/current/index.js\");\n/* harmony import */ var _components_hourly_index__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/hourly/index */ \"./src/components/hourly/index.js\");\n/* harmony import */ var _components_forecast_index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/forecast/index */ \"./src/components/forecast/index.js\");\n/* harmony import */ var _services_weather_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./services/weather.service */ \"./src/services/weather.service.js\");\n/* harmony import */ var _services_forecast_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./services/forecast.service */ \"./src/services/forecast.service.js\");\n/* harmony import */ var _services_hourly_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./services/hourly.service */ \"./src/services/hourly.service.js\");\n/* harmony import */ var _services_observation_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./services/observation.service */ \"./src/services/observation.service.js\");\n/* harmony import */ var _services_geolocation_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./services/geolocation.service */ \"./src/services/geolocation.service.js\");\n\n\nvar tachyons = __webpack_require__(/*! tachyons/css/tachyons.css */ \"./node_modules/tachyons/css/tachyons.css\"); //Components\n\n\n\n\n\n\n //Services\n\n\n\n\n\n\nObject(angular__WEBPACK_IMPORTED_MODULE_0__[\"module\"])('wxflo-client', []).service('weather', _services_weather_service__WEBPACK_IMPORTED_MODULE_6__[\"default\"]).service('forecast', _services_forecast_service__WEBPACK_IMPORTED_MODULE_7__[\"default\"]).service('hourly', _services_hourly_service__WEBPACK_IMPORTED_MODULE_8__[\"default\"]).service('observation', _services_observation_service__WEBPACK_IMPORTED_MODULE_9__[\"default\"]).service('geolocation', _services_geolocation_service__WEBPACK_IMPORTED_MODULE_10__[\"default\"]).component('app', _components_app_index__WEBPACK_IMPORTED_MODULE_1__[\"default\"]).component('search', _components_search_index__WEBPACK_IMPORTED_MODULE_2__[\"default\"]).component('forecastWeather', _components_forecast_index__WEBPACK_IMPORTED_MODULE_5__[\"default\"]).component('currentWeather', _components_current_index__WEBPACK_IMPORTED_MODULE_3__[\"default\"]).component('hourlyWeather', _components_hourly_index__WEBPACK_IMPORTED_MODULE_4__[\"default\"]);\n\n//# sourceURL=webpack:///./src/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var angular__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! angular */ \"./node_modules/angular/index.js\");\n/* harmony import */ var angular__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(angular__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_app_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/app/index */ \"./src/components/app/index.js\");\n/* harmony import */ var _components_nav_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/nav/index */ \"./src/components/nav/index.js\");\n/* harmony import */ var _components_search_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/search/index */ \"./src/components/search/index.js\");\n/* harmony import */ var _components_current_index__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/current/index */ \"./src/components/current/index.js\");\n/* harmony import */ var _components_hourly_index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/hourly/index */ \"./src/components/hourly/index.js\");\n/* harmony import */ var _components_forecast_index__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/forecast/index */ \"./src/components/forecast/index.js\");\n/* harmony import */ var _services_weather_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./services/weather.service */ \"./src/services/weather.service.js\");\n/* harmony import */ var _services_forecast_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./services/forecast.service */ \"./src/services/forecast.service.js\");\n/* harmony import */ var _services_hourly_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./services/hourly.service */ \"./src/services/hourly.service.js\");\n/* harmony import */ var _services_observation_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./services/observation.service */ \"./src/services/observation.service.js\");\n/* harmony import */ var _services_geolocation_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./services/geolocation.service */ \"./src/services/geolocation.service.js\");\n\n\nvar tachyons = __webpack_require__(/*! tachyons/css/tachyons.css */ \"./node_modules/tachyons/css/tachyons.css\"); //Components\n\n\n\n\n\n\n\n //Services\n\n\n\n\n\n\nObject(angular__WEBPACK_IMPORTED_MODULE_0__[\"module\"])('wxflo-client', []).service('weather', _services_weather_service__WEBPACK_IMPORTED_MODULE_7__[\"default\"]).service('forecast', _services_forecast_service__WEBPACK_IMPORTED_MODULE_8__[\"default\"]).service('hourly', _services_hourly_service__WEBPACK_IMPORTED_MODULE_9__[\"default\"]).service('observation', _services_observation_service__WEBPACK_IMPORTED_MODULE_10__[\"default\"]).service('geolocation', _services_geolocation_service__WEBPACK_IMPORTED_MODULE_11__[\"default\"]).component('app', _components_app_index__WEBPACK_IMPORTED_MODULE_1__[\"default\"]).component('nav', _components_nav_index__WEBPACK_IMPORTED_MODULE_2__[\"default\"]).component('search', _components_search_index__WEBPACK_IMPORTED_MODULE_3__[\"default\"]).component('forecastWeather', _components_forecast_index__WEBPACK_IMPORTED_MODULE_6__[\"default\"]).component('currentWeather', _components_current_index__WEBPACK_IMPORTED_MODULE_4__[\"default\"]).component('hourlyWeather', _components_hourly_index__WEBPACK_IMPORTED_MODULE_5__[\"default\"]);\n\n//# sourceURL=webpack:///./src/main.js?");
 
 /***/ }),
 
