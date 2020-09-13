@@ -5,26 +5,30 @@
             {{ point.startTime | date:"shortTime"}} <img ng-src={{point.icon}} />{{ point.temperature }} &deg; F
         </li>
     </ul>
-</section> -->
+</section> 
+<div class="bb bw2"><h1 class="f4 near-white tc">By the Hour</h1></div>
+-->
 <!-- <pre>{{ $ctrl.hourlyData | json }}</pre> -->
-<section ng-if='$ctrl.weatherData' class="ph3 ph5-ns min-h-100 pv3"></section>
-    <article class="mw8 center br3 ba bw2 bg-wxflo-dark-blue overflow-x-scroll nowrap" scrollbar-color="red yellow">
-      <div class="dt-ns dt--fixed-ns w-100">
-        <div class="ph3 ph4-ns dtc-ns v-mid">
-            <article ng-repeat='point in $ctrl.weatherData.forecastHourly.properties.periods | limitTo:12' class="br2 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw5 dib bg-light-blue">
-                <img ng-src={{point.icon}} class="db w-50 br2 br--top" alt="forecast">
-                <div class="pa2 ph3-ns pb3-ns">
-                  <div class="dt w-100 mt1">
-                    <div class="dtc">
-                      <h1 class="f5 f4-ns mv0">{{ point.startTime | date:"shortTime"}}</h1>
-                    </div>
-                    <div class="dtc tr">
-                      <h2 class="f5 mv0">{{ point.temperature }} &deg; F</h2>
-                    </div>
+<article ng-if='$ctrl.weatherData' class="mw9 center mt2 br3 ba bw2 bg-wxflo-dark-blue">
+  <div class="bb bw2"><h1 class="f3 near-white tc">Your Weather By the Hour</h1></div>
+  <div class="overflow-x-scroll nowrap">
+    <div class="dt-ns dt--fixed-ns w-100">
+      <div class="ph2 ph3-ns dtc-ns">
+          <article ng-repeat='point in $ctrl.weatherData.forecastHourly.properties.periods | limitTo:12' class="br2 ba dark-gray b--black-10 mv1 w-100 w-50-m w-25-l mw5 dib bg-wxflo-light-blue">
+              <img ng-src={{point.icon}} class="db w-50 br2 br--top" alt="forecast">
+              <div class="pa2 ph3-ns pb3-ns">
+                <div class="dt w-100 mt1">
+                  <div class="dtc">
+                    <h1 class="f5 near-white f4-ns mv0">{{ point.startTime | date:"shortTime"}}</h1>
+                  </div>
+                  <div class="dtc tr">
+                    <h2 class="f5 near-white mv0">{{ point.temperature }} &deg; F</h2>
                   </div>
                 </div>
-            </article>
-        </div>   
+              </div>
+          </article>
       </div>
-    </article>
-</section>
+    </div>
+  </div>
+
+</article>
