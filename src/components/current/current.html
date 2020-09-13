@@ -1,9 +1,60 @@
-<h1>Current Conditions</h1>
-<section ng-if='$ctrl.weatherData.obsData.properties'>
-    <p>{{ $ctrl.weatherData.meta.properties.relativeLocation.properties.city }}, {{ $ctrl.weatherData.meta.properties.relativeLocation.properties.state }}</p>
-    <br><img src={{$ctrl.weatherData.obsData.properties.icon}} /><br>{{ $ctrl.weatherData.obsData.properties.textDescription }}
-    <p>Last update:  {{ $ctrl.weatherData.obsData.properties.timestamp | date:"short"}}</p>
-    <p>Temperature:  {{ $ctrl.weatherData.obsData.properties.temperature.value | number }} &deg; C</p>
-    <p>Feels Like:  {{ $ctrl.weatherData.obsData.properties.heatIndex.value | number }} &deg; C</p>
-</section>
-<!-- <pre>{{ $ctrl.weatherData.obsData.properties | json }}</pre> -->
+<article ng-if='$ctrl.weatherData.obsData.properties'>
+  <div class="mw9 center ph3-ns bg-wxflo-dark-blue br3 ba bw2">
+    <div class="cf ph2-ns">
+      <div class ="fl w-100 pa2">
+        <h1 class="f4 near-white mt0 mb0">Current observations near {{ $ctrl.weatherData.meta.properties.relativeLocation.properties.city }}, {{ $ctrl.weatherData.meta.properties.relativeLocation.properties.state }}</h1>
+      </div>
+      <div class="fl w-100 w-30-ns pa2">
+        <div class="bg-wxflo-light-blue pv4 br4 ba bw2">
+          <div class="tc">
+            <img ng-src={{$ctrl.weatherData.obsData.properties.icon}} class="br3 h6 w6 dib" title={{$ctrl.weatherData.obsData.properties.textDescription}}>
+            <h3 class="f3 near-white mb1">{{$ctrl.weatherData.obsData.properties.textDescription}}</h3>
+            <h2 class="f4 near-white mb2">{{ (($ctrl.weatherData.obsData.properties.temperature.value * 1.8)+32) }}&deg; F</h2>
+          </div>
+        </div>
+      </div>
+      <div class="fl w-100 w-20-ns pa1">
+        <div class="bg-wxflo-dark-blue">
+          <div class="pa2">
+            <dl class="f6 lh-title mv2">
+              <dt class="dib near-white">Relative Humidity:</dt>
+              <dd class="dib ml0 light-green">{{ $ctrl.weatherData.obsData.properties.relativeHumidity.value | number }}%</dd>
+            </dl>
+            <dl class="f6 lh-title mv2">
+              <dt class="dib near-white">Dewpoint:</dt>
+              <dd class="dib ml0 light-green">{{ $ctrl.weatherData.obsData.properties.dewpoint.value | number }} &deg; C</dd>
+            </dl>
+            <dl class="f6 lh-title mv2">
+              <dt class="dib near-white">Pressure:</dt>
+              <dd class="dib ml0 light-green">{{ $ctrl.weatherData.obsData.properties.barometricPressure.value * .01 }} mb</dd>
+            </dl>
+            <dl class="f6 lh-title mv2" ng-if="$ctrl.weatherData.forecast.properties.periods[0].isDaytime">
+              <dt class="dib near-white">Expected High:</dt>
+              <dd class="dib ml0 light-red">{{ $ctrl.weatherData.forecast.properties.periods[0].temperature}}&deg; F</dd>
+            </dl>
+            <dl class="f6 lh-title mv2" ng-if="$ctrl.weatherData.forecast.properties.periods[1].isDaytime">
+              <dt class="dib near-white">Expected High:</dt>
+              <dd class="dib ml0 light-red">{{ $ctrl.weatherData.forecast.properties.periods[1].temperature}}&deg; F</dd>
+            </dl>
+            <dl class="f6 lh-title mv2" ng-if="!$ctrl.weatherData.forecast.properties.periods[0].isDaytime">
+              <dt class="dib near-white">Expected Low:</dt>
+              <dd class="dib ml0 light-blue">{{ $ctrl.weatherData.forecast.properties.periods[0].temperature}}&deg; F</dd>
+            </dl>
+            <dl class="f6 lh-title mv2" ng-if="!$ctrl.weatherData.forecast.properties.periods[1].isDaytime">
+              <dt class="dib near-white">Expected Low:</dt>
+              <dd class="dib ml0 light-blue">{{ $ctrl.weatherData.forecast.properties.periods[1].temperature}}&deg; F</dd>
+            </dl>
+          </div>         
+        </div>
+      </div>
+      <div class="fl w-100 w-50-ns pa2">
+        <div class="bg-wxflo-dark-blue pv4">
+          <p class="near-white pa2">{{ $ctrl.weatherData.forecast.properties.periods[0].detailedForecast }}</p>
+        </div>
+      </div>
+      <div class ="fl w-100 pa2">
+        <h1 class="f6 near-white mt0 mb0">Latest Observation {{ $ctrl.weatherData.obsData.properties.timestamp | date:"short"}}</h1>
+      </div>
+    </div>
+  </div>
+</article>

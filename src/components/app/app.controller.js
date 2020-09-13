@@ -4,7 +4,7 @@
 class AppController{
     constructor(weather, geolocation){
         this.weather = weather;
-        this.location = 'stillwater, mn';
+        this.location = '';
         this.geolocation = geolocation;
     }
     $onInit(){

@@ -1,4 +1,7 @@
 import { module } from 'angular';
+
+const tachyons = require('tachyons/css/tachyons.css')
+
 //Components
 import AppComponent from './components/app/index';
 import SearchComponent from './components/search/index';
@@ -24,5 +27,3 @@ module('wxflo-client', [])
         .component('forecastWeather', ForecastWeatherComponent)
         .component('currentWeather', CurrentWeatherComponent)
         .component('hourlyWeather', HourlyWeatherComponent);
-
-//console.log(AppComponent);

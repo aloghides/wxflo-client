@@ -26,7 +26,10 @@
   "name": "client",
   "main": "",
   "dependencies": {
-    "angular": "^1.8.0"
+    "@angular/common": "^10.1.1",
+    "@angular/core": "^10.1.1",
+    "angular": "^1.8.0",
+    "tachyons": "^4.12.0"
   },
   "author": "",
   "license": "ISC"
