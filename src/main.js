@@ -1,14 +1,11 @@
 import { module } from 'angular';
-const nvd3 = require('angular-nvd3');
 
-const nvd3Style = require('nvd3/build/nv.d3.css');
 const tachyons = require('tachyons/css/tachyons.css');
 
 //Components
 import AppComponent from './components/app/index';
 import NavComponent from './components/nav/index'
 import SearchComponent from './components/search/index';
-import ChartsComponent from './components/charts/index';
 import CurrentWeatherComponent from './components/current/index';
 import HourlyWeatherComponent from './components/hourly/index';
 import ForecastWeatherComponent from './components/forecast/index';
@@ -20,7 +17,7 @@ import HourlyService from './services/hourly.service';
 import ObservationService from './services/observation.service';
 import GeolocationService from './services/geolocation.service';
 
-module('wxflo-client', [nvd3])
+module('wxflo-client', [])
         .service('weather', WeatherService)
         .service('forecast', ForecastService)
         .service('hourly', HourlyService)
@@ -29,7 +26,6 @@ module('wxflo-client', [nvd3])
         .component('app', AppComponent)
         .component('nav', NavComponent)
         .component('search', SearchComponent)
-        .component('charts', ChartsComponent)
         .component('forecastWeather', ForecastWeatherComponent)
         .component('currentWeather', CurrentWeatherComponent)
         .component('hourlyWeather', HourlyWeatherComponent);
